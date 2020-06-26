@@ -1,0 +1,26 @@
+﻿@model List<DAL.Competidor>
+
+@{
+    ViewBag.Title = "ListaCompetidores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista Competidores</h2>
+
+<table class="table table-bordered w-50">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+    </tr>
+    @foreach (var competidor in Model)
+    {
+        <tr>
+            <td>@competidor.Id</td>
+            <td>@competidor.Nombre</td>
+        </tr>
+    }
+
+</table>
+<button type="button" class="btn btn-primary" onclick="location.href = '/Competidores/AltaCompetidor';">Crear Nuevo Competidor</button>
+
+

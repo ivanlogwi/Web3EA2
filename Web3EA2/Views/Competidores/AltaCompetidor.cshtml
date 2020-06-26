@@ -1,0 +1,19 @@
+﻿@model DAL.Competidor
+
+@{
+    ViewBag.Title = "AltaCompetidor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AltaCompetidor</h2>
+
+<form action="/Competidores/AltaCompetidor" method="post">
+    <div>
+        Nombre Competidor:
+        @Html.EditorFor(o => o.Nombre)
+        @Html.ValidationMessageFor(o => o.Nombre, null, new { @class = "text-danger"})
+    </div>
+    <div>
+        <input type="submit" value="Guardar" />
+    </div>
+</form>

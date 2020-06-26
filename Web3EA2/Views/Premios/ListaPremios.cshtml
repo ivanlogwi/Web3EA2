@@ -1,0 +1,26 @@
+﻿@model List<DAL.CantidadPremiosPorCompetidor>
+
+@{
+    ViewBag.Title = "ListaPremios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista Premios</h2>
+
+<table class="table table-bordered w-50">
+    <tr>
+        <th>Cantidad Premios</th>
+        <th>Año</th>
+        <th>Competidor</th>
+    </tr>
+    @foreach (var cantidad in Model)
+    {
+        <tr>
+            <td>@cantidad.CantidadPremios</td>
+            <td>@cantidad.Año</td>
+            <td>@cantidad.Competidor.Nombre</td>
+        </tr>
+    }
+</table>
+
+<button type="button" class="btn btn-primary" onclick="location.href = '/Premios/AltaPremios';">Crear Nuevo Premio</button>
