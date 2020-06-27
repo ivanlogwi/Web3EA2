@@ -1,0 +1,41 @@
+﻿@model DAL.CantidadPremiosPorCompetidor 
+@{
+    ViewBag.Title = "AltaPremios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AltaPremios</h2>
+
+<form action="/Premios/AltaPremios" method="post">
+    <div>
+        Seleccione competidor:
+        <select name="idCompetidor">
+            <option value="0" selected="selected" disabled="disabled">Todos</option>
+            @foreach (DAL.Competidor competidor in ViewBag.NombreCompetidor)
+            {
+                if (competidor.Id == ViewBag.IdNombreCompetidorSeleccionado)
+                {
+                    <option value="@competidor.Id" selected="selected">@competidor.Nombre</option>
+                }
+                else
+                {
+                    <option value="@competidor.Id">@competidor.Nombre</option>
+                }
+            }
+        </select>
+        @Html.ValidationMessageFor(o => o.idCompetidor, null, new { @class = "text-danger" })
+    </div>
+    <div>
+        Año:
+        @Html.EditorFor(o => o.Año)
+        @Html.ValidationMessageFor(o => o.Año, null, new { @class = "text-danger" })
+    </div>
+    <div>
+        Cantidad de Premios:
+        @Html.EditorFor(o => o.CantidadPremios)
+        @Html.ValidationMessageFor(o => o.CantidadPremios, null, new { @class = "text-danger" })
+    </div>
+    <div>
+        <input type="submit" value="Guardar" />
+    </div>
+</form>

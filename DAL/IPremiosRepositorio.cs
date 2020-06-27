@@ -10,5 +10,7 @@ namespace DAL
 
         List<CantidadPremiosPorCompetidor> ListaPremios();
 
+        string TotalPremiosPorAño(int Año);
+
     }
 }

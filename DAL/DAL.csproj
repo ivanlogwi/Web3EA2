@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{85DE2254-927E-4B06-9611-52A9541D0395}</ProjectGuid>
+    <ProjectGuid>{E5A0CA75-2E29-48AA-8196-6E5F3AFE7927}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL</RootNamespace>
@@ -51,62 +51,61 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CantidadPremiosPorCompetidor.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Web3EA2.tt</DependentUpon>
     </Compile>
     <Compile Include="Competidor.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Web3EA2.tt</DependentUpon>
     </Compile>
     <Compile Include="IPremiosRepositorio.cs" />
-    <Compile Include="Partials\Competidor.cs" />
-    <Compile Include="Partials\CompetidorMetadataType.cs" />
     <Compile Include="PremiosRepositorio.cs" />
-    <Compile Include="CompetidoresRepositorio.cs" />
     <Compile Include="ICompetidoresRepositorio.cs" />
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EA2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EA2.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="CompetidoresRepositorio.cs" />
+    <Compile Include="Partials\PremiosMetadataType.cs" />
+    <Compile Include="Partials\CompetidorMetadataType.cs" />
+    <Compile Include="Partials\Competidor.cs" />
+    <Compile Include="Partials\Premios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="EA2.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EA2.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <Compile Include="Web3EA2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web3EA2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Web3EA2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web3EA2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Web3EA2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web3EA2.edmx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="EA2.edmx.diagram">
-      <DependentUpon>EA2.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>EA2.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EA2.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
+    <EntityDeploy Include="Web3EA2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Web3EA2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Web3EA2.edmx.diagram">
+      <DependentUpon>Web3EA2.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Web3EA2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Web3EA2.edmx</DependentUpon>
+      <LastGenOutput>Web3EA2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web3EA2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Web3EA2.edmx</DependentUpon>
+      <LastGenOutput>Web3EA2.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,9 +15,9 @@ namespace DAL
     public partial class CantidadPremiosPorCompetidor
     {
         public int Id { get; set; }
-        public Nullable<int> CantidadPremios { get; set; }
-        public Nullable<int> Año { get; set; }
-        public Nullable<int> idCompetidor { get; set; }
+        public int CantidadPremios { get; set; }
+        public int Año { get; set; }
+        public int idCompetidor { get; set; }
     
         public virtual Competidor Competidor { get; set; }
     }

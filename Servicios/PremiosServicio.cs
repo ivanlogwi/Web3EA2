@@ -25,5 +25,11 @@ namespace Servicios
         {
             return PremiosRepositorio.ListaPremios();
         }
+
+        public string TotalPremiosPorAño(int Año)
+        {
+
+            return PremiosRepositorio.TotalPremiosPorAño(Año);
+        }
     }
 }

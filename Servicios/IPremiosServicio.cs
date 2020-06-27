@@ -1,4 +1,5 @@
 ﻿using DAL;
+using System;
 using System.Collections.Generic;
 
 namespace Servicios
@@ -8,5 +9,7 @@ namespace Servicios
         void AltaPremios(CantidadPremiosPorCompetidor cantidadPremiosPorCompetidor);
 
         List<CantidadPremiosPorCompetidor> ListaPremios();
+
+        string TotalPremiosPorAño(int Año);
     }
 }
