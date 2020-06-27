@@ -224,7 +224,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CantidadTotalPremiosApiController.cs" />
     <Compile Include="Controllers\PremiosController.cs" />
-    <Compile Include="DTOs\PremiosDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
